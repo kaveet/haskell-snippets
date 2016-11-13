@@ -4,14 +4,16 @@ A series of helpful Haskell functions and implementations for beginners.
 
 ## Sorting Algorithms
 
-### Quicksort [(Gist)](https://gist.github.com/kaveet/681a5c991f3d7a6eb5bfc4d55897e427)
+### Quicksort [(Gist)](https://gist.github.com/kaveet/681a5c991f3d7a6eb5bfc4d55897e427) [(Wiki)](https://en.wikipedia.org/wiki/Quicksort)
 
-Complexity
+#### Complexity
 
 | Case        | Complexity |
 | ----------- |:----------:|
 | Worst       |   O(n^2)   |
 | Average     |  O(nlogn)  |
+
+#### Implementation
 
 ```haskell
 quicksort :: (Ord a) => [a] -> [a]
