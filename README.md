@@ -18,16 +18,15 @@ A series of helpful Haskell functions and implementations for beginners.
 | Worst       |   O(n^2)   |
 | Average     |  O(nlogn)  |
 
-#### Implementation
+#### Implementation (List Comprehension)
 
 ```haskell
 quicksort :: (Ord a) => [a] -> [a]
 quicksort [] = []
 quicksort (x:xs) = quicksort [y | y <- xs, y <= x] ++ [x] ++ quicksort [y | y <- xs, y > x]
 ```
-#### Alternate implementation 
-
-The implementation above uses **list comprehension**. Without list comprehension, the quicksort snippet would look like this:
+#### Implementation
+Credit @aadithpm
 
 ```haskell
 quicksort :: (Ord a) => [a] -> [a]
