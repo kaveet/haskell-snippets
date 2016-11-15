@@ -31,7 +31,7 @@ Credit [@aadithpm](https://github.com/aadithpm)
 ```haskell
 quicksort :: (Ord a) => [a] -> [a]
 quicksort [] = []
-quicksort (x:xs) = quicksort [small] ++ [x] ++ quicksort [big]
+quicksort (x:xs) = (quicksort small) ++ [x] ++ (quicksort big)
 where
         small  = filter (< x) xs
         big = filter (>= x) xs
