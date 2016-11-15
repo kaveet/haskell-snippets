@@ -50,6 +50,17 @@ safetail xs
   | otherwise = tail xs
 ```
 
+### List Reverse [(Gist)](https://gist.github.com/kaveet/2fec32c18a35a51476711a912ff442c9)
+Reverse a list using pattern matching.
+
+```haskell
+module Reverse where
+
+reverse :: [a] -> [a]
+reverse [] = []
+reverse (x:xs) = reverse xs ++ [x]
+```
+
 ## Miscellaneous
 
 ### Fibonacci Sequence [(Gist)](https://gist.github.com/kaveet/924cd0991f320d2195c6823940175725)
