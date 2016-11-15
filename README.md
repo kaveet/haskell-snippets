@@ -29,6 +29,7 @@ quicksort (x:xs) = quicksort [y | y <- xs, y <= x] ++ [x] ++ quicksort [y | y <-
 ## List Functions
 
 ### Safetail [(Gist)](https://gist.github.com/kaveet/6cab6fe7e494b61470870f45a7c2d60f)
+A tail function with accommodations for the empty list.
 
 #### Implementation (Conditional)
 
