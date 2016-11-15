@@ -6,6 +6,7 @@ A series of helpful Haskell functions and implementations for beginners.
 
 * [Sorting Algorithms](#sorting-algorithms)
 * [List Functions](#list-functions)
+* [Contributing](#contributing)
 
 ## Sorting Algorithms
 
@@ -86,3 +87,14 @@ fib 0 = 1
 fib 1 = 1
 fib n = fib (n-1) + fib (n-2)
 ```
+
+## Contributing
+
+Contributions are encouraged and welcome! The motivation of this repository is to collect enlightening Haskell code and to teach by example. Open a pull request after you have done the following:
+
+* Compile code in GHC and verify correctness
+* Added code snippet to README.md
+* Added necessary Table of Content entries
+* Added necessary explanation and/or links
+
+Feel free to @mention yourself to credit your contributions!
