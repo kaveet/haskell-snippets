@@ -31,7 +31,7 @@ Credit [@aadithpm](https://github.com/aadithpm)
 ```haskell
 quicksort :: (Ord a) => [a] -> [a]
 quicksort [] = []
-quicksort (x:xs) = quicksort [small] ++ [x] ++ quicksort [big]
+quicksort (x:xs) = (quicksort small) ++ [x] ++ (quicksort big)
 where
         small  = filter (< x) xs
         big = filter (>= x) xs
@@ -45,16 +45,12 @@ A tail function with accommodations for the empty list.
 #### Implementation (Conditional)
 
 ```haskell
-module Safetail where
-
 safetail :: Eq a => [a] -> [a]
 safetail xs = if xs == [] then [] else tail xs
 ```
 #### Implementation (Guarded)
 
 ```haskell
-module Safetail where
-
 safetail :: Eq a => [a] -> [a]
 safetail xs
   | xs == []  = []
@@ -65,8 +61,6 @@ safetail xs
 Reverse a list using pattern matching.
 
 ```haskell
-module Reverse where
-
 reverse :: [a] -> [a]
 reverse [] = []
 reverse (x:xs) = reverse xs ++ [x]
@@ -79,8 +73,6 @@ reverse (x:xs) = reverse xs ++ [x]
 #### Implementation
 
 ```haskell
-module Fibonacci where
-
 fib :: Integer -> Integer
 fib 0 = 1
 fib 1 = 1
