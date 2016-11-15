@@ -25,6 +25,18 @@ quicksort :: (Ord a) => [a] -> [a]
 quicksort [] = []
 quicksort (x:xs) = quicksort [y | y <- xs, y <= x] ++ [x] ++ quicksort [y | y <- xs, y > x]
 ```
+#### Alternate implementation 
+
+The implementation above uses **list comprehension**. Without list comprehension, the quicksort snippet would look like this:
+
+```haskell
+quicksort :: (Ord a) => [a] -> [a]
+quicksort [] = []
+quicksort (x:xs) = quicksort [small] ++ [x] ++ quicksort [big]
+where
+        small  = filter (< x) xs
+        big = filter (>= x) xs
+```
 
 ## List Functions
 
