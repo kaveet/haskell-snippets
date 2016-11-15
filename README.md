@@ -26,7 +26,7 @@ quicksort [] = []
 quicksort (x:xs) = quicksort [y | y <- xs, y <= x] ++ [x] ++ quicksort [y | y <- xs, y > x]
 ```
 #### Implementation
-Credit @aadithpm
+Credit [@aadithpm](https://github.com/aadithpm)
 
 ```haskell
 quicksort :: (Ord a) => [a] -> [a]
