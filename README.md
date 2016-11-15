@@ -5,7 +5,7 @@ A series of helpful Haskell functions and implementations for beginners.
 ## Contents
 
 * [Sorting Algorithms](#sorting-algorithms)
-* [List Manipulations](#list-manipulations)
+* [List Functions](#list-functions)
 
 ## Sorting Algorithms
 
@@ -26,7 +26,7 @@ quicksort [] = []
 quicksort (x:xs) = quicksort [y | y <- xs, y <= x] ++ [x] ++ quicksort [y | y <- xs, y > x]
 ```
 
-## List Manipulations
+## List Functions
 
 ### Safetail [(Gist)](https://gist.github.com/kaveet/6cab6fe7e494b61470870f45a7c2d60f)
 
@@ -47,4 +47,19 @@ safetail :: Eq a => [a] -> [a]
 safetail xs
   | xs == []  = []
   | otherwise = tail xs
+```
+
+## Miscellaneous
+
+### Fibonacci Sequence [(Gist)](https://gist.github.com/kaveet/924cd0991f320d2195c6823940175725)
+
+#### Implementation
+
+```haskell
+module Fibonacci where
+
+fib :: Integer -> Integer
+fib 0 = 1
+fib 1 = 1
+fib n = fib (n-1) + fib (n-2)
 ```
