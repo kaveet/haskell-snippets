@@ -1,6 +1,6 @@
 # Haskell Snippets
 
-A series of helpful Haskell functions and implementations for beginners.
+A series of helpful Haskell functions and implementations for beginners. Note that these implementations emphasize understanding rather than conciseness.
 
 ## Contents
 
@@ -61,10 +61,22 @@ safetail xs
 ### List Reverse [(Gist)](https://gist.github.com/kaveet/2fec32c18a35a51476711a912ff442c9)
 Reverse a list using pattern matching.
 
+#### Implementation
+
 ```haskell
 reverse :: [a] -> [a]
 reverse [] = []
 reverse (x:xs) = reverse xs ++ [x]
+```
+
+### List Length
+
+#### Implementation (Recursive Strategy) [(Gist)](https://gist.github.com/kaveet/e1a7e272c44eb79f594d4db3b9d03db8)
+
+```haskell
+length           :: [a] -> Int
+length []        =  0
+length (_:xs)    =  1 + length xs
 ```
 
 ## Miscellaneous
