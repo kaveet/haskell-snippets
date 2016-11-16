@@ -69,9 +69,9 @@ reverse [] = []
 reverse (x:xs) = reverse xs ++ [x]
 ```
 
-### List Length
+### List Length [(Gist)](https://gist.github.com/kaveet/e1a7e272c44eb79f594d4db3b9d03db8)
 
-#### Implementation (Recursive Strategy) [(Gist)](https://gist.github.com/kaveet/e1a7e272c44eb79f594d4db3b9d03db8)
+#### Implementation (Recursive Strategy)
 
 ```haskell
 length           :: [a] -> Int
