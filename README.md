@@ -79,6 +79,19 @@ length []        =  0
 length (_:xs)    =  1 + length xs
 ```
 
+### Check Palindrome [(Gist)](https://gist.github.com/kaveet/acf4d9cd6bbfdd8351fe31b6372a3a0e)
+
+#### Implementation (With Prelude Functions)
+
+Note that the prelude function `init` returns a list without its last element, while the function `tail` returns the list without its first element. The composition of the functions (explicity using the `$` operator) results in a list without its first _and_ last elements.
+
+```haskell
+palindrome :: [a] -> Bool
+palindrome []  = True
+palindrome [_] = True
+palindrome xs  = (head xs) == (last xs) && (palindrome $ init $ tail xs)
+```
+
 ## Miscellaneous
 
 ### Fibonacci Sequence [(Gist)](https://gist.github.com/kaveet/924cd0991f320d2195c6823940175725)
