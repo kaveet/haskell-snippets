@@ -5,7 +5,14 @@ A series of helpful Haskell functions and implementations for beginners. Note th
 ## Contents
 
 * [Sorting Algorithms](#sorting-algorithms)
+  * [Quicksort](#quicksort-gist-wiki)
 * [List Functions](#list-functions)
+  * [Safetail](#safetail-gist)
+  * [Reverse](#list-reverese-gist)
+  * [Length](#list-length-gist)
+  * [Palindrome](#check-palindrome-gist)
+* [Miscellaneous](#miscellaneous)
+  * [Fibonacci](#fibonacci-sequence-gist)
 * [Contributing](#contributing)
 
 ## Sorting Algorithms
