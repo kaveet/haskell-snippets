@@ -13,6 +13,7 @@ A series of helpful Haskell functions and implementations for beginners. Note th
   * [Palindrome](#check-palindrome-gist)
 * [Miscellaneous](#miscellaneous)
   * [Fibonacci](#fibonacci-sequence-gist)
+  * [Factorial](#factorial-gist)
 * [Contributing](#contributing)
 
 ## Sorting Algorithms
@@ -110,6 +111,15 @@ fib :: Integer -> Integer
 fib 0 = 1
 fib 1 = 1
 fib n = fib (n-1) + fib (n-2)
+```
+
+### Factorial [(Gist)](https://gist.github.com/kaveet/96ca4b81ba395bbd397013749f20717c)
+Compute the factorial of n recursively.
+
+```haskell
+factorial :: Int -> Int
+factorial 0 = 1
+factorial n = n * factorial (n-1)
 ```
 
 ## Contributing
