@@ -11,6 +11,7 @@ A series of helpful Haskell functions and implementations for beginners. Note th
   * [Reverse](#list-reverese-gist)
   * [Length](#list-length-gist)
   * [Palindrome](#check-palindrome-gist)
+  * [Check Sorted](#check-sorted-gist)
 * [Miscellaneous](#miscellaneous)
   * [Fibonacci](#fibonacci-sequence-gist)
   * [Factorial](#factorial-gist)
@@ -98,6 +99,16 @@ palindrome :: Eq a => [a] -> Bool
 palindrome []  = True
 palindrome [_] = True
 palindrome xs  = (head xs) == (last xs) && (palindrome $ init $ tail xs)
+```
+
+### Check Sorted [(Gist)](https://gist.github.com/kaveet/b77f2f3add61d9c3afdb6852b7f36b03)
+Check if list is sorted in ascending order (smallest to largest values).
+
+```haskell
+sorted :: (Ord a) => [a] -> Bool
+sorted [] = True
+sorted [x] = True
+sorted (x:y:xs) = if x <= y then sorted (y:xs) else False
 ```
 
 ## Miscellaneous
