@@ -6,6 +6,7 @@ A series of helpful Haskell functions and implementations for beginners. Note th
 
 * [Sorting Algorithms](#sorting-algorithms)
   * [Quicksort](#quicksort-gist-wiki)
+  * [Insertion Sort](#insertion-sort-gist-wiki)
 * [List Functions](#list-functions)
   * [Safetail](#safetail-gist)
   * [Reverse](#list-reverese-gist)
@@ -46,6 +47,23 @@ where
         small  = filter (< x) xs
         big = filter (>= x) xs
 ```
+### Insertion Sort [(Gist)](https://gist.github.com/kaveet/aa15c5007e08df1aef37bd9d9c98af0f) [(Wiki)](https://en.wikipedia.org/wiki/Insertion_sort)
+
+#### Complexity
+
+| Case        | Complexity |
+| ----------- |:----------:|
+| Worst       |   O(n^2)   |
+| Average     |   O(n^2)   |
+
+#### Implementation (Using Insert)
+Note: this implementation depends on the function `insert` from the module `Data.List`. See the gist for an example on importing this module selectively with hiding.
+
+```haskell
+insertsort :: Ord a => [a] -> [a]
+insertsort  =  foldr insert []
+```
+
 
 ## List Functions
 
@@ -103,6 +121,8 @@ palindrome xs  = (head xs) == (last xs) && (palindrome $ init $ tail xs)
 
 ### Check Sorted [(Gist)](https://gist.github.com/kaveet/b77f2f3add61d9c3afdb6852b7f36b03)
 Check if list is sorted in ascending order (smallest to largest values).
+
+#### Implementation
 
 ```haskell
 sorted :: (Ord a) => [a] -> Bool
