@@ -7,9 +7,10 @@ A series of helpful Haskell functions and implementations for beginners. Note th
 * [Sorting Algorithms](#sorting-algorithms)
   * [Quicksort](#quicksort-gist-wiki)
   * [Insertion Sort](#insertion-sort-gist-wiki)
+  * [Selection Sort](#selection-sort-gist-wiki)
 * [List Functions](#list-functions)
   * [Safetail](#safetail-gist)
-  * [Reverse](#list-reverese-gist)
+  * [Reverse](#list-reverse-gist)
   * [Length](#list-length-gist)
   * [Palindrome](#check-palindrome-gist)
   * [Check Sorted](#check-sorted-gist)
@@ -62,6 +63,27 @@ Note: this implementation depends on the function `insert` from the module `Data
 ```haskell
 insertsort :: Ord a => [a] -> [a]
 insertsort  =  foldr insert []
+```
+
+### Selection Sort [(Gist)](https://gist.github.com/kaveet/f3601316ce415e16fd4d927a3522cd0c) [(Wiki)](https://en.wikipedia.org/wiki/Selection_sort)
+
+#### Complexity
+
+| Case        | Complexity |
+| ----------- |:----------:|
+| Worst       |   O(n^2)   |
+| Average     |   O(n^2)   |
+
+#### Implementation
+
+```haskell
+selSort :: (Ord a) => [a] -> [a]
+selSort [] = []
+selSort xs = let x = maximum xs in selSort (remove x xs) ++ [x] 
+  where remove _ [] = []
+        remove a (x:xs)
+          | x == a = xs
+          | otherwise = x : remove a xs
 ```
 
 
