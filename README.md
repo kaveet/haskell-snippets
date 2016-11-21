@@ -18,6 +18,7 @@ A series of helpful Haskell functions and implementations for beginners. Note th
   * [Fibonacci](#fibonacci-sequence-gist)
   * [Factorial](#factorial-gist)
 * [Contributing](#contributing)
+* [Motivation](#motivation)
 
 ## Sorting Algorithms
 
@@ -185,3 +186,7 @@ Contributions are encouraged and welcome! The motivation of this repository is t
 * Added necessary explanation and/or links
 
 Feel free to @mention yourself to credit your contributions!
+
+## Motivation
+
+This repository is both a exercise in Haskell and a resource for beginners in search of transparent, clear examples of common implementations in the Haskell language. Focusing on typical programming problems allows us to juxtapose the thought patterns of this functional language against imperative languages normal to a Computer Science undergraduate program.
