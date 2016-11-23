@@ -17,6 +17,8 @@ A series of helpful Haskell functions and implementations for beginners. Note th
 * [Miscellaneous](#miscellaneous)
   * [Fibonacci](#fibonacci-sequence-gist)
   * [Factorial](#factorial-gist)
+* [Practice Problems](#practice-problems)
+  1. [Implement `map` with `foldr`](#implement-map-with-foldr-gist)
 * [Contributing](#contributing)
 * [Motivation](#motivation)
 
@@ -175,6 +177,22 @@ factorial :: Int -> Int
 factorial 0 = 1
 factorial n = n * factorial (n-1)
 ```
+
+## Practice Problems
+
+### Implement `map` with `foldr` [(Gist)](https://gist.github.com/kaveet/061beb43f80aaffb3ecdecc99aefd2e0)
+Write a function `map1` that mimics the functionality of `map` from the standard prelude, making use of `foldr`
+
+#### Solution
+```haskell
+map'            :: (a -> b) -> [a] -> [b]
+map' f []       = []
+map' f (x:xs)   = foldr (\y ys -> (f y):ys) [] xs
+```
+
+#### Explanation
+
+Coming soon...
 
 ## Contributing
 
