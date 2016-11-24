@@ -19,6 +19,7 @@ A series of helpful Haskell functions and implementations for beginners. Note th
   * [Factorial](#factorial-gist)
 * [Practice Problems](#practice-problems)
   1. [Implement `map` with `foldr`](#implement-map-with-foldr-gist)
+  1. [Implement `filter` with `foldr`](#implement-filter-with-foldr-gist)
 * [Contributing](#contributing)
 * [Motivation](#motivation)
 
@@ -181,13 +182,26 @@ factorial n = n * factorial (n-1)
 ## Practice Problems
 
 ### Implement `map` with `foldr` [(Gist)](https://gist.github.com/kaveet/061beb43f80aaffb3ecdecc99aefd2e0)
-Write a function `map1` that mimics the functionality of `map` from the standard prelude, making use of `foldr`
+Write a function `map'` that mimics the functionality of `map` from the standard prelude, making use of `foldr`
 
 #### Solution
 ```haskell
 map'            :: (a -> b) -> [a] -> [b]
 map' f []       = []
 map' f (x:xs)   = foldr (\y ys -> (f y):ys) [] xs
+```
+
+#### Explanation
+
+Coming soon...
+
+### Implement `filter` with `foldr` [(Gist)](https://gist.github.com/kaveet/a397dab4d01ddd9e692a4d1470d83ced)
+Write a function `filter'` that mimics the functionality of `filter` from the standard prelude, making use of `foldr`
+
+#### Solution
+
+```haskell
+filter' p = foldr (\x xs -> if p x then x : xs else xs) []
 ```
 
 #### Explanation
