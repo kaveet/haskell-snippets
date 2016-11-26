@@ -12,6 +12,7 @@ A series of helpful Haskell functions and implementations for beginners. Note th
   * [Safetail](#safetail-gist)
   * [Reverse](#list-reverse-gist)
   * [Length](#list-length-gist)
+  * [Sum](#list-sum-gist)
   * [Palindrome](#check-palindrome-gist)
   * [Check Sorted](#check-sorted-gist)
 * [Miscellaneous](#miscellaneous)
@@ -130,6 +131,16 @@ reverse (x:xs) = reverse xs ++ [x]
 length           :: [a] -> Int
 length []        =  0
 length (_:xs)    =  1 + length xs
+```
+
+### List Sum [(Gist)](https://gist.github.com/kaveet/00570b553d52aeedaeb0f23a6bdd51cd)
+
+#### Implementation
+
+```haskell
+sum :: [Int] -> Int
+sum [] = 0
+sum (x:xs) = x + sum xs
 ```
 
 ### Check Palindrome [(Gist)](https://gist.github.com/kaveet/acf4d9cd6bbfdd8351fe31b6372a3a0e)
