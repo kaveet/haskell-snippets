@@ -2,6 +2,9 @@
 
 A series of helpful Haskell functions and implementations for beginners. Note that these implementations emphasize understanding rather than conciseness.
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![star this repo](http://githubbadges.com/star.svg?user=kaveet&repo=haskell-snippets&style=flat)](https://github.com/kaveet/haskell-snippets)
+[![fork this repo](http://githubbadges.com/fork.svg?user=kaveet&repo=haskell-snippets&style=flat)](https://github.com/kaveet/haskell-snippets/fork)
+
 ## Contents
 
 * [Sorting Algorithms](#sorting-algorithms)
