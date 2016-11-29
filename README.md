@@ -18,6 +18,7 @@ A series of helpful Haskell functions and implementations for beginners. Note th
 * [Miscellaneous](#miscellaneous)
   * [Fibonacci](#fibonacci-sequence-gist)
   * [Factorial](#factorial-gist)
+  * [Absolute Value](#absolute-value-gist)
 * [Practice Problems](#practice-problems)
   1. [Implement `map` with `foldr`](#implement-map-with-foldr-gist)
   1. [Implement `filter` with `foldr`](#implement-filter-with-foldr-gist)
@@ -188,6 +189,15 @@ Compute the factorial of n recursively.
 factorial :: Int -> Int
 factorial 0 = 1
 factorial n = n * factorial (n-1)
+```
+
+### Absolute Value [(Gist)](https://gist.github.com/kaveet/2b095ee5e0a063e6a904abeca9d11de5)
+Compute the absolute value of an integer n.
+
+```haskell
+absoluteValue :: Int -> Int
+absoluteValue n | n >= 0 = n
+                | otherwise  = -n
 ```
 
 ## Practice Problems
