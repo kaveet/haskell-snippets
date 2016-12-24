@@ -18,6 +18,7 @@ A series of helpful Haskell functions and implementations for beginners. Note th
   * [Sum](#list-sum-gist)
   * [Palindrome](#check-palindrome-gist)
   * [Check Sorted](#check-sorted-gist)
+  * [Duplicate Each Element](#duplicate-each-element-gist)
 * [Miscellaneous](#miscellaneous)
   * [Fibonacci](#fibonacci-sequence-gist)
   * [Factorial](#factorial-gist)
@@ -170,6 +171,15 @@ sorted :: (Ord a) => [a] -> Bool
 sorted [] = True
 sorted [x] = True
 sorted (x:y:xs) = if x <= y then sorted (y:xs) else False
+```
+
+### Duplicate Each Element [(Gist)](https://gist.github.com/kaveet/5b87195010d5eff624534e0dfb1186c7)
+Repeat each element in a list twice ([a,b,c] -> [a,a,b,b,c,c])
+
+```haskell
+duplicate :: [a] -> [a]
+duplicate []     = []
+duplicate (x:xs) = [x, x] ++ duplicate xs
 ```
 
 ## Miscellaneous
